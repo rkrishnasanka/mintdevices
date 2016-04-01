@@ -1,0 +1,42 @@
+DEVICE grid_2
+
+LAYER FLOW
+H TREE m1 1 to 2 spacing=1200 flowChannelWidth=100 ;
+H TREE m2 2 to 1 spacing=1200 flowChannelWidth=100 ;
+PORT p1, p2 r=100;
+SQUARE CELL TRAP ct1, ct2, ct3, ct4 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+CHANNEL c1 from p1 3 to m1 1 w=100;
+CHANNEL c2 from m1 2 to ct1 1 w=100;
+CHANNEL c3 from m1 3 to ct2 1 w=100;
+
+CHANNEL c4 from ct1 2 to ct2 4 w=100;
+
+CHANNEL c5 from ct1 3 to ct3 1 w=100;
+CHANNEL c6 from ct2 3 to ct4 1 w=100;
+
+CHANNEL c7 from ct3 2 to ct4 4 w=100;
+CHANNEL c8 from ct3 3 to m2 1 w=100;
+CHANNEL c9 from ct4 3 to m2 2 w=100;
+CHANNEL c10 from m2 3 to p2 1 w=100;
+
+END LAYER
+
+LAYER CONTROL
+V BANK cpb1 of 2 PORT r=100 dir=RIGHT spacing=1500 channelWidth=100;
+V BANK cpb2 of 1 PORT r=100 dir=LEFT spacing=1500 channelWidth=100;
+
+VALVE v1 on c4 w=100 l=300;
+
+CHANNEL n1 from cpb1 1 to v1 3 w=50;
+
+VALVE v2 on c5 w=300 l=100;
+VALVE v3 on c6 w=300 l=100;
+
+CHANNEL cc1 from v2 2 to v3 4 w=50;
+CHANNEL cc2 from v3 2 to cpb2 1 w=50;
+
+VALVE v4 on c7 w=100 l=300;
+
+CHANNEL n2 from cpb1 2 to v4 3 w=50;
+
+END LAYER
