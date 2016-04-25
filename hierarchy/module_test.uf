@@ -1,0 +1,18 @@
+IMPORT net_test
+
+DEVICE module_test
+
+
+net_test nt1,nt2,nt3,nt4;
+
+LAYER FLOW
+
+CHANNEL cx1 from nt1 1 to nt2 2 w = 100;
+CHANNEL cx2 from nt2 1 to nt3 2 w = 100;
+CHANNEL cx3 from nt3 1 to nt4 2 w = 100;
+
+
+END LAYER
+
+
+

@@ -1,4 +1,4 @@
-DEVICE super_mux
+DEVICE super_mux_01
 
 LAYER FLOW
 V TREE m1 8 to 1 spacing=1500 flowChannelWidth=100 controlChannelWidth=20;

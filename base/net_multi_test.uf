@@ -19,8 +19,8 @@ PORT cp1, cp2 r=100;
 VALVE v10 on c9 w=200 l=100;
 VALVE v11 on c10 w=200 l=100;
 
-NET from cp1 1 to v11 2, v10 2 channelWidth=50;
+NET cntrlnet1 from cp1 1 to v11 2, v10 2 channelWidth=50;
 
-NET from cp2 1 to v11 4, v10 4 channelWidth=50;
+NET cntrlnet2 from cp2 1 to v11 4, v10 4 channelWidth=50;
 
 END LAYER

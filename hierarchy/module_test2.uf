@@ -1,0 +1,19 @@
+IMPORT grad_gen_h_fan
+
+DEVICE module_test2
+
+grad_gen_h_fan ggh1, ggh2;
+
+
+
+LAYER FLOW
+
+H GRADIENT GENERATOR g 2 to 7 numBends=5 bendSpacing=100 bendLength=500 channelWidth=100;
+
+CHANNEL c1 from ggh1 1 to g 1 w=100;
+
+CHANNEL c2 from ggh2 1 to g 2 w=100;
+
+END LAYER
+
+

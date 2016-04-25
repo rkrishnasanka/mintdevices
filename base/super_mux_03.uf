@@ -1,4 +1,4 @@
-DEVICE super_mux
+DEVICE super_mux_03
 
 LAYER FLOW
 V BANK b1 of 8 PORT r=100 dir=RIGHT spacing=1500 channelWidth=100;

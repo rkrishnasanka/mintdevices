@@ -44,7 +44,7 @@ VALVE v13 on c12 w=200 l=100;
 VALVE v14 on c13 w=200 l=100;
 VALVE v15 on c14 w=200 l=100;
 VALVE v16 on c15 w=200 l=100;
-NET from cp4 1 to v16 4, v10 4, v11 4, v12 4, v13 4, v14 4, v15 4, v9 4 channelWidth=50;
+NET nt1 from cp4 1 to v16 4, v10 4, v11 4, v12 4, v13 4, v14 4, v15 4, v9 4 channelWidth=50;
 
 
 END LAYER
