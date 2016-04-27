@@ -27,6 +27,10 @@ CHANNEL c19 from n3 4 to ct4 2 w=50;
 CHANNEL c19 from n4 3 to ct4 1 w=50;
 CHANNEL c20 from n4 1 to ct1 3 w=50;
 
+
+
+
+
 END LAYER
 
 LAYER CONTROL
